@@ -30,7 +30,7 @@ public abstract class alumno extends Persona {
 
                     // Y lo metes en la iteración del array, es decir, en la primera posición
                     // disponible
-                    misNotas[i] = n;
+                   misNotas.add(i, n);
 
                 }
 
@@ -40,12 +40,13 @@ public abstract class alumno extends Persona {
 
     }
 
+   /*
     // Determinar si un alumno ha pasado de curso o no
     public boolean alumnoPasa() {
 
         return true;
 
-    }
+    } */
 
     @Override
     abstract public boolean pasarCurso();

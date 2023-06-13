@@ -7,25 +7,26 @@ public class alumnobach extends alumno {
 
     }
 
+    //Alumno bach pasa de curso si la nota es 5 y no hay ninguna suspensa
     @Override
     public boolean pasarCurso() {
 
         float media = 0;
-        float resultado = 0;
+        float suma = 0;
         float suspenso = 0;
 
         // Voy a recorrer todo el array de notas
-        for (int i = 0; i < misNotas.length; i++) {
+        for (int i = 0; i < misNotas.size(); i++) {
 
             // Necesito calcular su media
             // Así que sumaré cada iteración
-            media += misNotas[i].getValorNota();
+            suma += misNotas.get(i).getValorNota();
 
             // Y luego haré la media
-            resultado = media / misNotas.length;
+            media = suma / misNotas.size();
 
             // Si una nota es menor de 4
-            if (misNotas[i].getValorNota() < 4) {
+            if (misNotas.get(i).getValorNota() < 4) {
 
                 suspenso++;
                 break;
